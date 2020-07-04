@@ -3,12 +3,16 @@ pipeline{
   stages{
     stage ('git clone')
     { steps
-      { sh 'downloading code'}
+      { sh 'echo downloading code'}
     }
     
     stage ('code compile')
     { steps 
       { sh 'echo code is compiling'}
+    }
+    stage ('Deploy')
+    { steps 
+      { sh 'echo code is deploying'}
     }
   }
   }
